@@ -1,14 +1,29 @@
-
-
-task.wait(2)
-
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
 if getgenv().loaded then 
     return
 end 
 
 getgenv().loaded = true 
 
+local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "Injecting Script/Bypass",
+    Text = "wait 8 seconds to load",
+    Duration = 8, -- seconds the notification stays on screen
+    Button1 = "Got it"
+})
+
+
 task.wait(8)
+StarterGui:SetCore("SendNotification", {
+    Title = "Made by Envy",
+    Text = "Euphoria is loading, please wait for the gui to show. enjoy!",
+    Duration = 8, -- seconds the notification stays on screen
+    Button1 = "Got it"
+})
 
 if LPH_OBFUSCATED == nil then
     local assert = assert
@@ -65,7 +80,7 @@ if LPH_OBFUSCATED == nil then
     end
     LRM_IsUserPremium = false
     LRM_LinkedDiscordID = "0"
-    LRM_ScriptName = "HolyServices"
+    LRM_ScriptName = "Euphoria"
     LRM_TotalExecutions = 0
     LRM_SecondsLeft = math.huge
     LRM_UserNote = "Developer";
@@ -92,8 +107,7 @@ local Services = setmetatable({}, {
 
 if Game_Name == "South Bronx" and not Solara then
 
-    task.spawn( function() 
-        local _getallthreads = LPH_JIT_MAX(function()
+         local _getallthreads = LPH_JIT_MAX(function()
             local threads = {}
             for i, v in getreg() do
                 if type(v) == 'thread' then
@@ -206,7 +220,6 @@ if Game_Name == "South Bronx" and not Solara then
 
             XVNP_L()
         end))
-    end)
     task.wait(5)
 end
 
@@ -217,7 +230,7 @@ if LPH_OBFUSCATED then
 end
 
 if script_key then
-    writefile("HolyServices_Key.txt", script_key)
+    writefile("BronxLol_Key.txt", script_key)
 end
 
 do 
@@ -249,7 +262,7 @@ local FireServer, InvokeServer, UnreliableFireServer = Instance.new("RemoteEvent
 
 if isfunctionhooked then
     if isfunctionhooked(FireServer) or isfunctionhooked(UnreliableFireServer) or isfunctionhooked(InvokeServer) and LPH_OBFUSCATED then
-        return Services.LocalPlayer:Kick("HolyServices | Security : You are running another script, please disable it and execute again")
+        return Services.LocalPlayer:Kick("Euphoria| Security : You are running another script, please disable it and execute again")
     end
 end
 
@@ -260,28 +273,23 @@ local Config = {
         ["Selected_Item"] = "...";
 
         ["TeleportationList"] = {
-            ["Deli Market 🥪"] = CFrame.new(-602.3944091796875, 253.73313903808594, -584.2000732421875);
-            ["Capital One Bank 🏦"] = CFrame.new(-205, 284, -1214);
-            ["Ice Box 🧊"] = CFrame.new(-198.8927001953125, 283.8486633300781, -1170.4500732421875);
-            ["Domino's 🍕"] = CFrame.new(-742.5213012695312, 253.22897338867188, -946.2092895507812);
-            ["Hotel 🏨"] = CFrame.new(-1012, 266, -933);
-            ["Drip Store 👓"] = CFrame.new(67462.6953125, 10489.0322265625, 546.6762084960938);
-            ["Gun Shop 🔫"] = CFrame.new(92970.4140625, 122097.953125, 17023.623046875);
-            ["Car Dealer 🚗"] = CFrame.new(-378.6668701171875, 253.2564697265625, -1245.4259033203125);
-            ["Laundromat 💷"] = CFrame.new(-979.4635620117188, 253.65318298339844, -689.3339233398438);
-            ["Studio 🎙"] = CFrame.new(93408.453125, 14484.7158203125, 570.139404296875);
-            ["Basketball Court 🏀"] = CFrame.new(-1055.6407470703125, 253.51364135742188, -497.10528564453125);
-            ["Robbable Ice Box 🧊"] = CFrame.new(-209.68360900878906, 283.4959411621094, -1265.5286865234375);
-            ["Walgreens 💊"] = CFrame.new(-344.694702, 254.453827, -386.100037);
-            ["Backpack 🎒"] = CFrame.new(-676.898987, 253.780930, -686.596985);
-            ["Quick Shop 🛒"] = CFrame.new(-600, 254, -580);
-            ["Exotic Dealer / Grass House 🍃"] = CFrame.new(-1521.943115234375, 272.5462646484375, -984.3020629882812);
-            ["Safe 🔒"] = CFrame.new(-190, 295, -1010);
-            ["Roof Top / Bank Tools 🛠"] = CFrame.new(-385, 340, -557);
-            ["Second Gun Shop 🔫"] = CFrame.new(66202, 123615.7109375, 5749.81689453125);
-            ["Construction Job 🔨"] = CFrame.new(-1729, 371, -1171);
-            ["Hospital 🏥"] = CFrame.new(-1362.34326171875, 253.43112182617188, 40.53081512451172);
-            ["Mansion 🏚️"] = CFrame.new(-782.2013549804688, 253.33062744140625, 1312.432861328125);
+            ["Deli Market ￰ﾟﾥﾪ"] = CFrame.new(-602.3944091796875, 253.73313903808594, -584.2000732421875);
+            ["Capital One Bank ￰ﾟﾏﾦ"] = CFrame.new(-205, 284, -1214);
+            ["Ice Box ￰ﾟﾧﾊ"] = CFrame.new(-198.8927001953125, 283.8486633300781, -1170.4500732421875);
+            ["Domino's ￰ﾟﾍﾕ"] = CFrame.new(-742.5213012695312, 253.22897338867188, -946.2092895507812);
+            ["Hotel ￰ﾟﾏﾨ"] = CFrame.new(-1012, 266, -933);
+            ["Drip Store ￰ﾟﾑﾓ"] = CFrame.new(67462.6953125, 10489.0322265625, 546.6762084960938);
+            ["Gun Shop ￰ﾟﾔﾫ"] = CFrame.new(92970.4140625, 122097.953125, 17023.623046875);
+            ["Car Dealer ￰ﾟﾚﾗ"] = CFrame.new(-378.6668701171875, 253.2564697265625, -1245.4259033203125);
+            ["Laundromat ￰ﾟﾒﾷ"] = CFrame.new(-979.4635620117188, 253.65318298339844, -689.3339233398438);
+            ["Studio ￰ﾟﾎﾙ"] = CFrame.new(93408.453125, 14484.7158203125, 570.139404296875);
+            ["Basketball Court ￰ﾟﾏﾀ"] = CFrame.new(-1055.6407470703125, 253.51364135742188, -497.10528564453125);
+            ["Robbable Ice Box ￰ﾟﾧﾊ"] = CFrame.new(-209.68360900878906, 283.4959411621094, -1265.5286865234375);
+            ["Exotic Dealer / Grass House ￰ﾟﾍﾃ"] = CFrame.new(-1521.943115234375, 272.5462646484375, -984.3020629882812);
+            ["Safe ￰ﾟﾔﾒ"] = CFrame.new(-190, 295, -1010);
+            ["Roof Top / Bank Tools ￰ﾟﾛﾠ"] = CFrame.new(-385, 340, -557);
+            ["Second Gun Shop ￰ﾟﾔﾫ"] = CFrame.new(66202, 123615.7109375, 5749.81689453125);
+            ["Construction Job ￰ﾟﾔﾨ"] = CFrame.new(-1729, 371, -1171);
         };
 
         ["Modifications"] = newproxy(true);
@@ -403,21 +411,21 @@ local Config = {
         };
 
         ["Locations"] = {
-            ["ATM 🏧"] = CFrame.new(360, 2563, 1946);
-            ["Gun Dealer 🔫"] = CFrame.new(231, 2545, 1065);
-            ["Gold Shop 🪙"] = CFrame.new(-78.1158218383789, 2563.1123046875, 944.74365234375);
-            ["Barber 💈"] = CFrame.new(1217.6531982421875, 2557.93896484375, 981.182861328125);
-            ["Monderella 🍕"] = CFrame.new(428.89581298828125, 2563.31005859375, 1275.4918212890625);
-            ["Deli 🥪"] = CFrame.new(-70.2744369506836, 2562.807861328125, 719.9676513671875);
-            ["Library 📖"] = CFrame.new(53.477169036865234, 2562.908203125, 1960.6444091796875);
-            ["Laboratory 🔬"] = CFrame.new(564, 2563, 1957);
-            ["Hot Dog Stand 🌭"] = CFrame.new(295.57403564453125, 2562.7646484375, 1996.2435302734375);
-            ["Gym 💪" ] = CFrame.new(-37.920719146728516, 2563.05029296875, 442.32647705078125);
-            ["Banks Burgers 🍔"] = CFrame.new(794.2547607421875, 2562.93701171875, 311.8097229003906);
-            ["Laundromat 💷"] = CFrame.new(402.6617126464844, 2562.892822265625, 1503.2645263671875);
-            ["Cocaine Factory 🏭"] = CFrame.new(1227, 2529, 1987);
-            ["Cooking Pots 🧪"] = CFrame.new(131, 2540, 1004);
-            ["Scrap Metal ⚒️"] = CFrame.new(1049, 2563, 1052);
+            ["ATM ￰ﾟﾏﾧ"] = CFrame.new(360, 2563, 1946);
+            ["Gun Dealer ￰ﾟﾔﾫ"] = CFrame.new(231, 2545, 1065);
+            ["Gold Shop ￰ﾟﾪﾙ"] = CFrame.new(-78.1158218383789, 2563.1123046875, 944.74365234375);
+            ["Barber ￰ﾟﾒﾈ"] = CFrame.new(1217.6531982421875, 2557.93896484375, 981.182861328125);
+            ["Monderella ￰ﾟﾍﾕ"] = CFrame.new(428.89581298828125, 2563.31005859375, 1275.4918212890625);
+            ["Deli ￰ﾟﾥﾪ"] = CFrame.new(-70.2744369506836, 2562.807861328125, 719.9676513671875);
+            ["Library ￰ﾟﾓﾖ"] = CFrame.new(53.477169036865234, 2562.908203125, 1960.6444091796875);
+            ["Laboratory ￰ﾟﾔﾬ"] = CFrame.new(564, 2563, 1957);
+            ["Hot Dog Stand ￰ﾟﾌﾭ"] = CFrame.new(295.57403564453125, 2562.7646484375, 1996.2435302734375);
+            ["Gym ￰ﾟﾒﾪ" ] = CFrame.new(-37.920719146728516, 2563.05029296875, 442.32647705078125);
+            ["Banks Burgers ￰ﾟﾍﾔ"] = CFrame.new(794.2547607421875, 2562.93701171875, 311.8097229003906);
+            ["Laundromat ￰ﾟﾒﾷ"] = CFrame.new(402.6617126464844, 2562.892822265625, 1503.2645263671875);
+            ["Cocaine Factory ￰ﾟﾏﾭ"] = CFrame.new(1227, 2529, 1987);
+            ["Cooking Pots ￰ﾟﾧﾪ"] = CFrame.new(131, 2540, 1004);
+            ["Scrap Metal ￢ﾚﾒ￯ﾸﾏ"] = CFrame.new(1049, 2563, 1052);
         };
 
         ["PackFarm"] = {
@@ -470,21 +478,21 @@ local Config = {
         ["Item_Amount"] = 1;
 
         ["Locations"] = {
-            ["Main Gun Store 🔫"] = CFrame.new(219, 6, -158);
-            ["Black Market 💹"] = CFrame.new(671, 6, 251);
-            ["DealerShip 🚗"] = CFrame.new(738, 6, 439);
-            ["DealerShip Apartments 🌇"] = CFrame.new(717, 5, 548);
-            ["Clothes Store 👕"] = CFrame.new(-197, 6, -74);
-            ["Box Job Apartments 📦"] = CFrame.new(-527, 6, 142);
-            ["Bank 💳"] = CFrame.new(-47, 6, -340);
-            ["Fake ID Seller 🎫"] = CFrame.new(219, 6, -331);
-            ["DOA Turf 🔴"] = CFrame.new(-335, 6, -415);
-            ["OGZ Turf 🟣"] = CFrame.new(125, 6, -466);
-            ["YGZ Turf 🟢"] = CFrame.new(3, 6, 223);
-            ["Studio 🎙"] = CFrame.new(522, 6, -26);
-            ["Shoe Store 👟"] = CFrame.new(525, 7, -184);
-            ["Second Gun Store 🔫"] = CFrame.new(-459, 6, 328);
-            ["Exclusive Gun Store 🔫"] = CFrame.new(1131, 4, 173);
+            ["Main Gun Store ￰ﾟﾔﾫ"] = CFrame.new(219, 6, -158);
+            ["Black Market ￰ﾟﾒﾹ"] = CFrame.new(671, 6, 251);
+            ["DealerShip ￰ﾟﾚﾗ"] = CFrame.new(738, 6, 439);
+            ["DealerShip Apartments ￰ﾟﾌﾇ"] = CFrame.new(717, 5, 548);
+            ["Clothes Store ￰ﾟﾑﾕ"] = CFrame.new(-197, 6, -74);
+            ["Box Job Apartments ￰ﾟﾓﾦ"] = CFrame.new(-527, 6, 142);
+            ["Bank ￰ﾟﾒﾳ"] = CFrame.new(-47, 6, -340);
+            ["Fake ID Seller ￰ﾟﾎﾫ"] = CFrame.new(219, 6, -331);
+            ["DOA Turf ￰ﾟﾔﾴ"] = CFrame.new(-335, 6, -415);
+            ["OGZ Turf ￰ﾟﾟﾣ"] = CFrame.new(125, 6, -466);
+            ["YGZ Turf ￰ﾟﾟﾢ"] = CFrame.new(3, 6, 223);
+            ["Studio ￰ﾟﾎﾙ"] = CFrame.new(522, 6, -26);
+            ["Shoe Store ￰ﾟﾑﾟ"] = CFrame.new(525, 7, -184);
+            ["Second Gun Store ￰ﾟﾔﾫ"] = CFrame.new(-459, 6, 328);
+            ["Exclusive Gun Store ￰ﾟﾔﾫ"] = CFrame.new(1131, 4, 173);
         };
         
         ["Selected_Location"] = "...";
@@ -549,12 +557,12 @@ local Config = {
         ["DrawFieldOfView"] = false;
         ["UseFieldOfView"] = false;
         ["Radius"] = 100;
-        ["FieldOfViewColor"] = Color3.new(1,1,1);
+        ["FieldOfViewColor"] = Color3.fromRGB(255, 105, 180);
         ["FieldOfViewTransparency"] = 0.25;
         ["Sides"] = 100;
         ["Smoothness"] = 1;
         ["Snapline"] = false;
-        ["SnaplineColor"] = Color3.new(1,1,1);
+        ["SnaplineColor"] = Color3.fromRGB(255, 105, 180);
         ["SnaplineThickness"] = 1;
     };
 
@@ -572,12 +580,12 @@ local Config = {
         ["DrawFieldOfView"] = false;
         ["UseFieldOfView"] = false;
         ["Radius"] = 100;
-        ["FieldOfViewColor"] = Color3.new(1,1,1);
+        ["FieldOfViewColor"] = Color3.fromRGB(255, 105, 180);
         ["FieldOfViewTransparency"] = 0.25;
         ["Sides"] = 100;
         ["HitChance"] = 100;
         ["Snapline"] = false;
-        ["SnaplineColor"] = Color3.new(1,1,1);
+        ["SnaplineColor"] = Color3.fromRGB(255, 105, 180);
         ["Damage"] = 100;
         ["SnaplineThickness"] = 1;
     };
@@ -643,7 +651,7 @@ local Config = {
         MaxDistance = 500,
         FontSize = 12,
         Font = Enum.Font.Code,
-        FadeOut = {
+        EuphoriaOut = {
             OnDistance = false,
             OnDeath = true,
             OnLeave = false,
@@ -657,7 +665,7 @@ local Config = {
             Chams = {
                 Enabled  = false,
                 Thermal = true,
-                FillRGB = Color3.fromRGB(255, 0, 0),
+                FillRGB = Color3.fromRGB,
                 Fill_Transparency = 80,
                 OutlineRGB = Color3.fromRGB(0,0,0),
                 Outline_Transparency = 80,
@@ -678,11 +686,11 @@ local Config = {
                 RGB = Color3.fromRGB(255, 255, 255),
             },
             Weapons = {
-                Enabled = false, WeaponTextRGB = Color3.fromRGB(255, 0, 0),
+                Enabled = false, WeaponTextRGB = Color3.fromRGB(255, 105, 180),
                 Outlined = false,
                 Gradient = false,
                 Transparency = 0,
-                GradientRGB1 = Color3.fromRGB(255, 255, 255), GradientRGB2 = Color3.fromRGB(255, 0, 0),
+                GradientRGB1 = Color3.fromRGB(255, 255, 255), GradientRGB2 = Color3.fromRGB(255, 105, 180),
             },
             Inventory = {
                 Enabled = false, RGB = Color3.fromRGB(255, 255, 255),
@@ -699,8 +707,8 @@ local Config = {
             Boxes = {
                 Animate = true,
                 RotationSpeed = 300,
-                Gradient = false, GradientRGB1 = Color3.fromRGB(255, 0, 0), GradientRGB2 = Color3.fromRGB(0, 0, 0), 
-                GradientFill = true, GradientFillRGB1 = Color3.fromRGB(255, 0, 0), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
+                Gradient = false, GradientRGB1 = Color3.fromRGB(255, 105, 180), GradientRGB2 = Color3.fromRGB(0, 0, 0), 
+                GradientFill = true, GradientFillRGB1 = Color3.fromRGB(255, 105, 180), GradientFillRGB2 = Color3.fromRGB(0, 0, 0), 
                 Filled = {
                     Enabled = false,
                     Transparency = 0.75,
@@ -748,7 +756,7 @@ local Config = {
 end]]
 
 getgenv().library = {
-    directory = "HolyServices_remastered",
+    directory = "Euphoria_remastered",
     folders = {
         "/fonts",
         "/configs",
@@ -807,432 +815,432 @@ if not Solara then
         LPH_JIT_MAX(function()
             local Repr = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ozzypig/repr/refs/heads/master/repr.lua"))()
 
-                local Required = {
-                        "hookfunction",
-                        "getthreadcontext",
-                        "getconnections",
-                        "setthreadcontext",
-                        "isexecutorclosure",
-                        "hookmetamethod",
-                        "getrenv",
-                }
-
-                for _, v in next, Required do
-                        if not getgenv()[v] then
-                                game:GetService("Players").LocalPlayer:Kick(`Your executor does not support [{v}], which is REQUIRED to use the BlockSpin script.`)
-                        end
-                end
-
-                local OldDebugTraceback, OldDebugInfo, OldFenv = debug.traceback, debug.info, getfenv
-
-                local BlacklistedRemoteArgumentNeedles = {
-                        "invalid_entry",
-                        "replicate_bil",
-                }
-
-                local BlacklistedCallerNeedles = {
-                        "Obfuscated",
-                }
-
-                if not shared.Hooking then
-                        shared.Hooking = {}
-                end
-
-                if not shared.Hooking.IncludeInStackFunctions then
-                        shared.Hooking.IncludeInStackFunctions = {}
-                end
-
-                shared.SafeHook = function(Original, Replacement)
-                        shared.Hooking.IncludeInStackFunctions[Original] = true
-                        return hookfunction(Original, Replacement)
-                end
-
-                local CoreGui = game:GetService("CoreGui")
-                local RobloxGuis = {
-                        "RobloxGui",
-                        "TeleportGui",
-                        "RobloxPromptGui",
-                        "RobloxLoadingGui",
-                        "PlayerList",
-                        "RobloxNetworkPauseNotification",
-                        "PurchasePrompt",
-                        "HeadsetDisconnectedDialog",
-                        "ThemeProvider",
-                        "DevConsoleMaster",
-                }
-
-                local function FilterTable(InputTable)
-                        local OldContext = getthreadcontext()
-                        setthreadcontext(7)
-
-                        local Filtered = {}
-                        local GameInstance = game
-
-                        for Index, Value in ipairs(InputTable) do
-                                if typeof(Value) ~= "Instance" then
-                                        table.insert(Filtered, Value)
-                                else
-                                        if Value == CoreGui or Value == GameInstance then
-                                                -- Insert only the default Roblox GUIs
-                                                for _, GuiName in pairs(RobloxGuis) do
-                                                        local GuiInstance = CoreGui:FindFirstChild(GuiName)
-                                                        if GuiInstance then
-                                                                table.insert(Filtered, GuiInstance)
-                                                        end
-                                                end
-
-                                                if Value == GameInstance then
-                                                        for _, Child in pairs(GameInstance:GetChildren()) do
-                                                                if Child ~= CoreGui then
-                                                                        table.insert(Filtered, Child)
-                                                                end
-                                                        end
-                                                end
-                                        else
-                                                if not CoreGui:IsAncestorOf(Value) then
-                                                        table.insert(Filtered, Value)
-                                                else
-                                                        -- Only include if it's a descendant of one of the default GUIs
-                                                        for _, DefaultGuiName in pairs(RobloxGuis) do
-                                                                local DefaultGuiInstance = CoreGui:FindFirstChild(DefaultGuiName)
-                                                                if DefaultGuiInstance then
-                                                                        if Value == DefaultGuiInstance or DefaultGuiInstance:IsAncestorOf(Value) then
-                                                                                table.insert(Filtered, Value)
-                                                                                break
-                                                                        end
-                                                                end
-                                                        end
-                                                end
-                                        end
-                                end
-                        end
-
-                        setthreadcontext(OldContext)
-                        return Filtered
-                end
-
-                local BlacklistedAssets = {}
-                local ContentProvider = game:GetService("ContentProvider")
-
-                local function logDebugMessage(...)
-                        local Strings = {}
-
-                        for _, v in next, { ... } do
-                                table.insert(Strings, tostring(v))
-                        end
-
-                        local Message = table.concat(Strings, ", ")
-                        warn(`{Message}\n`)
-                end
-
-                local function ValidTraceback(s)
-                        local dotPos = string.find(s, "%.")
-                        local colonPos = string.find(s, ":")
-
-                        if not dotPos then
-                                return false
-                        end
-
-                        if not colonPos then
-                                return true
-                        end
-
-                        return dotPos < colonPos
-                end
-
-                local function TracebackLines(str)
-                        local pos = 1
-                        return function()
-                                if not pos then
-                                        return nil
-                                end
-                                local p1, p2 = string.find(str, "\r?\n", pos)
-                                local line
-                                if p1 then
-                                        line = str:sub(pos, p1 - 1)
-                                        pos = p2 + 1
-                                else
-                                        line = str:sub(pos)
-                                        pos = nil
-                                end
-                                return line
-                        end
-                end
-
-                OldDebugTraceback = shared.SafeHook(getrenv().debug.traceback, function()
-                        if checkcaller() then
-                                return OldDebugTraceback()
-                        end
-
-                        local Traceback = OldDebugTraceback()
-                        local NewTraceback = {}
-
-                        for Line in TracebackLines(Traceback) do
-                                if not ValidTraceback(Line) then
-                                        continue
-                                end
-
-                                table.insert(NewTraceback, Line)
-                        end
-
-                        return table.concat(NewTraceback, "\n")
-                end)
-
-                OldDebugInfo = shared.SafeHook(getrenv().debug.info, function(...)
-                        local ToInspect, LevelOrInfo, _ThreadInfo = ...
-
-                        if
-                                checkcaller()
-                                or typeof(ToInspect) == "function"
-                                or typeof(ToInspect) == "thread"
-                                or not pcall(function(LevelOrInfo) -- Validate arguments
-                                        OldDebugInfo(function() end, LevelOrInfo)
-                                end, LevelOrInfo)
-                        then
-                                return OldDebugInfo(...)
-                        end
-
-                        local ReconstructedConstructedStack = {}
-                        for Level = 2, 19997 do
-                                local Function, Source, Line, Name, NumberOfArgs, Varargs = OldDebugInfo(Level, "fslna")
-
-                                if not Function or not Source or not Line or not Name then
-                                        break
-                                end
-
-                                if isexecutorclosure(Function) and not shared.Hooking.IncludeInStackFunctions[Function] then
-                                        continue
-                                end
-
-                                table.insert(ReconstructedConstructedStack, {
-                                        f = Function,
-                                        s = Source,
-                                        l = Line,
-                                        n = Name,
-                                        a = { NumberOfArgs, Varargs },
-                                })
-                        end
-
-                        local InfoLevel = ReconstructedConstructedStack[ToInspect]
-
-                        if not InfoLevel then
-                                -- Max level is 19997 so this guarantees that it will return nothing
-                                return OldDebugInfo(3e4, LevelOrInfo)
-                        end
-
-                        local ReturnResult = {}
-                        for idx, info in string.split(LevelOrInfo, "") do
-                                local Value = InfoLevel[info]
-
-                                if typeof(Value) == "table" then
-                                        for _, v in Value do
-                                                table.insert(ReturnResult, v)
-                                        end
-
-                                        continue
-                                end
-
-                                table.insert(ReturnResult, Value)
-                        end
-
-                        return table.unpack(ReturnResult, 1, #ReturnResult)
-                end)
-
-                OldFenv = shared.SafeHook(getrenv().getfenv, function(...)
-                        if checkcaller() then
-                                return OldFenv(...)
-                        end
-
-                        local ToInspect = ...
-
-                        if ToInspect == 0 then
-                                return getrenv()
-                        elseif ToInspect == nil then
-                                return OldFenv(...)
-                        end
-
-                        local Success, ResultingEnv = pcall(function()
-                                if typeof(ToInspect) == "number" then
-                                        return OldFenv(ToInspect + 3)
-                                end
-
-                                return OldFenv(ToInspect)
-                        end)
-
-                        if not Success then
-                                return OldFenv(...)
-                        end
-
-                        if typeof(ToInspect) == "function" then
-                                if typeof(ResultingEnv["getgenv"]) == "function" and isexecutorclosure(ResultingEnv["getgenv"]) then
-                                        return getrenv()
-                                end
-
-                                return ResultingEnv
-                        end
-
-                        local ReconstructedConstructedStack = {}
-                        for Level = 2, 19997 do
-                                local StackInfoSuccess, Data = pcall(function()
-                                        return {
-                                                Environement = OldFenv(Level + 3),
-                                                Function = OldDebugInfo(Level + 3, "f"),
-                                        }
-                                end)
-
-                                if not StackInfoSuccess or not Data then
-                                        break
-                                end
-
-                                local Environement = Data.Environement
-                                -- local Function = Data.Function
-
-                                if typeof(Environement["getgenv"]) == "function" and isexecutorclosure(Environement["getgenv"]) then
-                                        Environement = getrenv()
-                                end
-
-                                table.insert(ReconstructedConstructedStack, Environement)
-                        end
-
-                        local InfoLevel = ReconstructedConstructedStack[ToInspect]
-
-                        if not InfoLevel then
-                                -- Max level is 19997 so this guarantees that it will return error
-                                return OldFenv(3e4)
-                        end
-
-                        return InfoLevel
-                end)
-
-                -- Disable all blacklisted connections
-
-                local BlacklistedSignals = {
-                        game:GetService("LogService").MessageOut,
-                        game:GetService("ScriptContext").Error,
-                }
-
-                local DummySignals = {}
-
-                for _, Signal in next, BlacklistedSignals do
-                        for _, Connection in next, getconnections(Signal) do
-                                -- dawg why does volcano return a thread for Connection.Function
-                                if
-                                        (Connection.Function
-                                        and type(Connection.Function) == "function"
-                                        and isexecutorclosure(Connection.Function)) or
-                                        Connection.Function == nil -- CoreScript connections return nil for Function
-                                then
-                                        continue
-                                else
-                                        Connection:Disable()
-                                end
-                        end
-                end
-
-                local OldIndex
-                OldIndex = hookmetamethod(game, "__index", function(Self, Key)
-                        if checkcaller() then
-                                return OldIndex(Self, Key)
-                        end
-                        
-                        local Result = OldIndex(Self, Key)
-
-                        for _, BlacklistedSignal in next, BlacklistedSignals do
-                                if Result == BlacklistedSignal then
-                                        if not DummySignals[BlacklistedSignal] then
-                                                DummySignals[BlacklistedSignal] = Instance.new("BindableEvent").Event
-                                        end
-
-                                        return DummySignals[BlacklistedSignal]
-                                end
-                        end
-
-                        return Result
-                end)
-
-                local OldNewIndex
-                OldNewIndex = hookmetamethod(game, "__newindex", function(Self, Key, Value)
-                        local AssetIndexes = {
-                                ["MeshID"] = true,
-                                ["TextureID"] = true,
-                                ["MeshId"] = true,
-                                ["TextureId"] = true,
-                                ["Image"] = true,
-                                ["SoundId"] = true,
-                                ["AnimationId"] = true,
-                        }
-
-                        if AssetIndexes[Key] then
-                                local AssetId = Value
-
-                                if typeof(AssetId) == "string" then
-                                        AssetId = tonumber(AssetId:match("%d+"))
-                                end
-
-                                if AssetId and not BlacklistedAssets[AssetId] then
-                                        -- Check if the asset is already loaded so we don't accidentally blacklist a legitimate asset
-                                        local AssetLoaded = false
-                                        if
-                                                ContentProvider:GetAssetFetchStatus("rbxassetid://" .. AssetId)
-                                                == Enum.AssetFetchStatus.Success
-                                        then
-                                                AssetLoaded = true
-                                        end
-
-                                        if checkcaller() then
-                                                if not AssetLoaded then
-                                                        BlacklistedAssets[AssetId] = true
-                                                end
-                                        else
-                                                if BlacklistedAssets[AssetId] then
-                                                        -- The game is doing a sanity check where it intentionally loads a blacklisted asset
-                                                        -- to see if the executor is blocking it. We need to remove it from the blacklist
-                                                        -- so it doesn't get blocked.
-                                                        BlacklistedAssets[AssetId] = nil
-                                                end
-                                        end
-                                end
-                        end
-
-                        if Key == "CanCollide" and (not checkcaller()) then
-                                local Name = debug.info(3, "n")
-                                if Name and Name:match("Obfuscated") then
-                                        return coroutine.yield()
-                                end
-                        end
-
-                        return OldNewIndex(Self, Key, Value)
-                end)
-
-                -- Now that we will proxy and record all assets the executor uses, we can load the hook.
-
-                local OldPreloadAsync
-                OldPreloadAsync = shared.SafeHook(
-                        ContentProvider.PreloadAsync,
-                        function(Self, Assets, OriginalCallback)
-                                if Self ~= ContentProvider or type(Assets) ~= "table" or type(OriginalCallback) ~= "function" then --note: callback can be nil but in that case it's useless anyways
-                                        return OldPreloadAsync(Self, Assets, OriginalCallback)
-                                end
-
-                                --check for any errors that I might've missed (such as table being {[2] = "something"} which causes "Unable to cast to Array")
-                                local err
-                                task.spawn(
-                                        function() --TIL calling a C yield function inside a C yield function is a bad idea ("cannot resume non-suspended coroutine")
-                                                local s, e = pcall(OldPreloadAsync, Self, Assets)
-                                                if not s and e then
-                                                        err = e
-                                                end
-                                        end
-                                )
-
-                                if err then
-                                        return OldPreloadAsync(Self, Assets) --don't pass the callback, just in case
-                                end
-
-                                Assets = FilterTable(Assets)
-                                return OldPreloadAsync(Self, Assets, OriginalCallback)
-                        end
-                )
+		local Required = {
+			"hookfunction",
+			"getthreadcontext",
+			"getconnections",
+			"setthreadcontext",
+			"isexecutorclosure",
+			"hookmetamethod",
+			"getrenv",
+		}
+
+		for _, v in next, Required do
+			if not getgenv()[v] then
+				game:GetService("Players").LocalPlayer:Kick(`Your executor does not support [{v}], which is REQUIRED to use the BlockSpin script.`)
+			end
+		end
+
+		local OldDebugTraceback, OldDebugInfo, OldFenv = debug.traceback, debug.info, getfenv
+
+		local BlacklistedRemoteArgumentNeedles = {
+			"invalid_entry",
+			"replicate_bil",
+		}
+
+		local BlacklistedCallerNeedles = {
+			"Obfuscated",
+		}
+
+		if not shared.Hooking then
+			shared.Hooking = {}
+		end
+
+		if not shared.Hooking.IncludeInStackFunctions then
+			shared.Hooking.IncludeInStackFunctions = {}
+		end
+
+		shared.SafeHook = function(Original, Replacement)
+			shared.Hooking.IncludeInStackFunctions[Original] = true
+			return hookfunction(Original, Replacement)
+		end
+
+		local CoreGui = game:GetService("CoreGui")
+		local RobloxGuis = {
+			"RobloxGui",
+			"TeleportGui",
+			"RobloxPromptGui",
+			"RobloxLoadingGui",
+			"PlayerList",
+			"RobloxNetworkPauseNotification",
+			"PurchasePrompt",
+			"HeadsetDisconnectedDialog",
+			"ThemeProvider",
+			"DevConsoleMaster",
+		}
+
+		local function FilterTable(InputTable)
+			local OldContext = getthreadcontext()
+			setthreadcontext(7)
+
+			local Filtered = {}
+			local GameInstance = game
+
+			for Index, Value in ipairs(InputTable) do
+				if typeof(Value) ~= "Instance" then
+					table.insert(Filtered, Value)
+				else
+					if Value == CoreGui or Value == GameInstance then
+						-- Insert only the default Roblox GUIs
+						for _, GuiName in pairs(RobloxGuis) do
+							local GuiInstance = CoreGui:FindFirstChild(GuiName)
+							if GuiInstance then
+								table.insert(Filtered, GuiInstance)
+							end
+						end
+
+						if Value == GameInstance then
+							for _, Child in pairs(GameInstance:GetChildren()) do
+								if Child ~= CoreGui then
+									table.insert(Filtered, Child)
+								end
+							end
+						end
+					else
+						if not CoreGui:IsAncestorOf(Value) then
+							table.insert(Filtered, Value)
+						else
+							-- Only include if it's a descendant of one of the default GUIs
+							for _, DefaultGuiName in pairs(RobloxGuis) do
+								local DefaultGuiInstance = CoreGui:FindFirstChild(DefaultGuiName)
+								if DefaultGuiInstance then
+									if Value == DefaultGuiInstance or DefaultGuiInstance:IsAncestorOf(Value) then
+										table.insert(Filtered, Value)
+										break
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+
+			setthreadcontext(OldContext)
+			return Filtered
+		end
+
+		local BlacklistedAssets = {}
+		local ContentProvider = game:GetService("ContentProvider")
+
+		local function logDebugMessage(...)
+			local Strings = {}
+
+			for _, v in next, { ... } do
+				table.insert(Strings, tostring(v))
+			end
+
+			local Message = table.concat(Strings, ", ")
+			warn(`{Message}\n`)
+		end
+
+		local function ValidTraceback(s)
+			local dotPos = string.find(s, "%.")
+			local colonPos = string.find(s, ":")
+
+			if not dotPos then
+				return false
+			end
+
+			if not colonPos then
+				return true
+			end
+
+			return dotPos < colonPos
+		end
+
+		local function TracebackLines(str)
+			local pos = 1
+			return function()
+				if not pos then
+					return nil
+				end
+				local p1, p2 = string.find(str, "\r?\n", pos)
+				local line
+				if p1 then
+					line = str:sub(pos, p1 - 1)
+					pos = p2 + 1
+				else
+					line = str:sub(pos)
+					pos = nil
+				end
+				return line
+			end
+		end
+
+		OldDebugTraceback = shared.SafeHook(getrenv().debug.traceback, function()
+			if checkcaller() then
+				return OldDebugTraceback()
+			end
+
+			local Traceback = OldDebugTraceback()
+			local NewTraceback = {}
+
+			for Line in TracebackLines(Traceback) do
+				if not ValidTraceback(Line) then
+					continue
+				end
+
+				table.insert(NewTraceback, Line)
+			end
+
+			return table.concat(NewTraceback, "\n")
+		end)
+
+		OldDebugInfo = shared.SafeHook(getrenv().debug.info, function(...)
+			local ToInspect, LevelOrInfo, _ThreadInfo = ...
+
+			if
+				checkcaller()
+				or typeof(ToInspect) == "function"
+				or typeof(ToInspect) == "thread"
+				or not pcall(function(LevelOrInfo) -- Validate arguments
+					OldDebugInfo(function() end, LevelOrInfo)
+				end, LevelOrInfo)
+			then
+				return OldDebugInfo(...)
+			end
+
+			local ReconstructedConstructedStack = {}
+			for Level = 2, 19997 do
+				local Function, Source, Line, Name, NumberOfArgs, Varargs = OldDebugInfo(Level, "fslna")
+
+				if not Function or not Source or not Line or not Name then
+					break
+				end
+
+				if isexecutorclosure(Function) and not shared.Hooking.IncludeInStackFunctions[Function] then
+					continue
+				end
+
+				table.insert(ReconstructedConstructedStack, {
+					f = Function,
+					s = Source,
+					l = Line,
+					n = Name,
+					a = { NumberOfArgs, Varargs },
+				})
+			end
+
+			local InfoLevel = ReconstructedConstructedStack[ToInspect]
+
+			if not InfoLevel then
+				-- Max level is 19997 so this guarantees that it will return nothing
+				return OldDebugInfo(3e4, LevelOrInfo)
+			end
+
+			local ReturnResult = {}
+			for idx, info in string.split(LevelOrInfo, "") do
+				local Value = InfoLevel[info]
+
+				if typeof(Value) == "table" then
+					for _, v in Value do
+						table.insert(ReturnResult, v)
+					end
+
+					continue
+				end
+
+				table.insert(ReturnResult, Value)
+			end
+
+			return table.unpack(ReturnResult, 1, #ReturnResult)
+		end)
+
+		OldFenv = shared.SafeHook(getrenv().getfenv, function(...)
+			if checkcaller() then
+				return OldFenv(...)
+			end
+
+			local ToInspect = ...
+
+			if ToInspect == 0 then
+				return getrenv()
+			elseif ToInspect == nil then
+				return OldFenv(...)
+			end
+
+			local Success, ResultingEnv = pcall(function()
+				if typeof(ToInspect) == "number" then
+					return OldFenv(ToInspect + 3)
+				end
+
+				return OldFenv(ToInspect)
+			end)
+
+			if not Success then
+				return OldFenv(...)
+			end
+
+			if typeof(ToInspect) == "function" then
+				if typeof(ResultingEnv["getgenv"]) == "function" and isexecutorclosure(ResultingEnv["getgenv"]) then
+					return getrenv()
+				end
+
+				return ResultingEnv
+			end
+
+			local ReconstructedConstructedStack = {}
+			for Level = 2, 19997 do
+				local StackInfoSuccess, Data = pcall(function()
+					return {
+						Environement = OldFenv(Level + 3),
+						Function = OldDebugInfo(Level + 3, "f"),
+					}
+				end)
+
+				if not StackInfoSuccess or not Data then
+					break
+				end
+
+				local Environement = Data.Environement
+				-- local Function = Data.Function
+
+				if typeof(Environement["getgenv"]) == "function" and isexecutorclosure(Environement["getgenv"]) then
+					Environement = getrenv()
+				end
+
+				table.insert(ReconstructedConstructedStack, Environement)
+			end
+
+			local InfoLevel = ReconstructedConstructedStack[ToInspect]
+
+			if not InfoLevel then
+				-- Max level is 19997 so this guarantees that it will return error
+				return OldFenv(3e4)
+			end
+
+			return InfoLevel
+		end)
+
+		-- Disable all blacklisted connections
+
+		local BlacklistedSignals = {
+			game:GetService("LogService").MessageOut,
+			game:GetService("ScriptContext").Error,
+		}
+
+		local DummySignals = {}
+
+		for _, Signal in next, BlacklistedSignals do
+			for _, Connection in next, getconnections(Signal) do
+				-- dawg why does volcano return a thread for Connection.Function
+				if
+					(Connection.Function
+					and type(Connection.Function) == "function"
+					and isexecutorclosure(Connection.Function)) or
+					Connection.Function == nil -- CoreScript connections return nil for Function
+				then
+					continue
+				else
+					Connection:Disable()
+				end
+			end
+		end
+
+		local OldIndex
+		OldIndex = hookmetamethod(game, "__index", function(Self, Key)
+			if checkcaller() then
+				return OldIndex(Self, Key)
+			end
+			
+			local Result = OldIndex(Self, Key)
+
+			for _, BlacklistedSignal in next, BlacklistedSignals do
+				if Result == BlacklistedSignal then
+					if not DummySignals[BlacklistedSignal] then
+						DummySignals[BlacklistedSignal] = Instance.new("BindableEvent").Event
+					end
+
+					return DummySignals[BlacklistedSignal]
+				end
+			end
+
+			return Result
+		end)
+
+		local OldNewIndex
+		OldNewIndex = hookmetamethod(game, "__newindex", function(Self, Key, Value)
+			local AssetIndexes = {
+				["MeshID"] = true,
+				["TextureID"] = true,
+				["MeshId"] = true,
+				["TextureId"] = true,
+				["Image"] = true,
+				["SoundId"] = true,
+				["AnimationId"] = true,
+			}
+
+			if AssetIndexes[Key] then
+				local AssetId = Value
+
+				if typeof(AssetId) == "string" then
+					AssetId = tonumber(AssetId:match("%d+"))
+				end
+
+				if AssetId and not BlacklistedAssets[AssetId] then
+					-- Check if the asset is already loaded so we don't accidentally blacklist a legitimate asset
+					local AssetLoaded = false
+					if
+						ContentProvider:GetAssetFetchStatus("rbxassetid://" .. AssetId)
+						== Enum.AssetFetchStatus.Success
+					then
+						AssetLoaded = true
+					end
+
+					if checkcaller() then
+						if not AssetLoaded then
+							BlacklistedAssets[AssetId] = true
+						end
+					else
+						if BlacklistedAssets[AssetId] then
+							-- The game is doing a sanity check where it intentionally loads a blacklisted asset
+							-- to see if the executor is blocking it. We need to remove it from the blacklist
+							-- so it doesn't get blocked.
+							BlacklistedAssets[AssetId] = nil
+						end
+					end
+				end
+			end
+
+			if Key == "CanCollide" and (not checkcaller()) then
+				local Name = debug.info(3, "n")
+				if Name and Name:match("Obfuscated") then
+					return coroutine.yield()
+				end
+			end
+
+			return OldNewIndex(Self, Key, Value)
+		end)
+
+		-- Now that we will proxy and record all assets the executor uses, we can load the hook.
+
+		local OldPreloadAsync
+		OldPreloadAsync = shared.SafeHook(
+			ContentProvider.PreloadAsync,
+			function(Self, Assets, OriginalCallback)
+				if Self ~= ContentProvider or type(Assets) ~= "table" or type(OriginalCallback) ~= "function" then --note: callback can be nil but in that case it's useless anyways
+					return OldPreloadAsync(Self, Assets, OriginalCallback)
+				end
+
+				--check for any errors that I might've missed (such as table being {[2] = "something"} which causes "Unable to cast to Array")
+				local err
+				task.spawn(
+					function() --TIL calling a C yield function inside a C yield function is a bad idea ("cannot resume non-suspended coroutine")
+						local s, e = pcall(OldPreloadAsync, Self, Assets)
+						if not s and e then
+							err = e
+						end
+					end
+				)
+
+				if err then
+					return OldPreloadAsync(Self, Assets) --don't pass the callback, just in case
+				end
+
+				Assets = FilterTable(Assets)
+				return OldPreloadAsync(Self, Assets, OriginalCallback)
+			end
+		)
         end)()
 
         local Sprint_Module = require(game:GetService("ReplicatedStorage").Modules.Game.Sprint)
@@ -1300,24 +1308,24 @@ if not Solara then
         end
 
         for Index, Value in Services.ReplicatedStorage.Workspace.Homeless:GetChildren() do
-            Value.Parent = Services.Workspace.HomelessPeople
+            Value.Parent = Services.Workspace.Folders.HomelessPeople
         end
 
-        for Index, Value in Services.Workspace.HomelessPeople:GetChildren() do
+        for Index, Value in Services.Workspace.Folders.HomelessPeople:GetChildren() do
             Value:GetPropertyChangedSignal('Parent'):Connect(LPH_NO_VIRTUALIZE(function()
                 task.wait()
-                Value.Parent = Services.Workspace.HomelessPeople
+                Value.Parent = Services.Workspace.Folders.HomelessPeople
             end))
         end
 
         for Index, Value in Services.ReplicatedStorage.Workspace.NPCs:GetChildren() do
-            Value.Parent = Services.Workspace.NPCs
+            Value.Parent = Services.Workspace.Folders.NPCs
         end
 
-        for Index, Value in Services.Workspace.NPCs:GetChildren() do
+        for Index, Value in Services.Workspace.Folders.NPCs:GetChildren() do
             Value:GetPropertyChangedSignal('Parent'):Connect(LPH_NO_VIRTUALIZE(function()
                 task.wait()
-                Value.Parent = Services.Workspace.NPCs
+                Value.Parent = Services.Workspace.Folders.NPCs
             end))
         end
 
@@ -2949,12 +2957,12 @@ do
                 frame.Parent = getgenv().HideScreenGUI
             
                 local textLabel = Instance.new("TextLabel")
-                textLabel.Name = "\nhideuiHolyServices"
+                textLabel.Name = "\nhideuiEuphoria"
                 textLabel.Size = UDim2.new(0, 400, 0, 100)
                 textLabel.Font = Enum.Font.SourceSansBold
                 textLabel.RichText = true
-                textLabel.Text = 'HolyServices\n' .. Title
-                textLabel.TextColor3 = Color3.fromRGB(128, 0, 128)
+                textLabel.Text = '<font color="rgb(57, 255, 20)">Euphoria.</font>\n' .. Title
+                textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
                 textLabel.BackgroundTransparency = 1
                 textLabel.TextSize = 36
                 textLabel.TextStrokeTransparency = 0.8 
@@ -2973,7 +2981,7 @@ do
                             local timeLeft = endTime - tick()
 
                             textLabel.Text = string.format(
-                                'HolyServices\n%s\nplease wait : <font color="rgb(160,32,240)">%.2f</font> seconds',
+                                '<font color="rgb(57, 255, 20)">Euphoria</font>lol\n%s\nplease wait : <font color="rgb(57, 255, 20)">%.2f</font> seconds',
                                 Title, math.max(timeLeft, 0)
                             )
 
@@ -3033,10 +3041,10 @@ do
                     end
                 end
             end), LPH_NO_VIRTUALIZE(function(Name)
-                if Workspace.HomelessPeople:FindFirstChild(Name) then
-                    local Prompt = Workspace.HomelessPeople:FindFirstChild(Name):FindFirstChildWhichIsA("ProximityPrompt", true)
+                if Workspace.Folders.HomelessPeople:FindFirstChild(Name) then
+                    local Prompt = Workspace.Folders.HomelessPeople:FindFirstChild(Name):FindFirstChildWhichIsA("ProximityPrompt", true)
 
-                    if Prompt and Prompt.Enabled and Workspace.HomelessPeople:FindFirstChild(Name).LeftLowerLeg.Rotation.X == 90 then
+                    if Prompt and Prompt.Enabled and Workspace.Folders.HomelessPeople:FindFirstChild(Name).LeftLowerLeg.Rotation.X == 90 then
                         return true
                     end
                 end
@@ -3057,7 +3065,7 @@ do
             end)
 
             local Get_Hobo = LPH_NO_VIRTUALIZE(function()
-                for i,v in Workspace.HomelessPeople:GetChildren() do
+                for i,v in Workspace.Folders.HomelessPeople:GetChildren() do
                     if CheckHobo(v.Name) then
                         return v
                     end
@@ -3085,7 +3093,7 @@ do
                         task.wait()
                         if Bike == nil then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Your bike was not found!`,
                                 lifetime = 5
                             })
@@ -3108,7 +3116,7 @@ do
                         task.wait()
                         if Bike == nil then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Your bike was not found!`,
                                 lifetime = 5
                             })
@@ -5244,12 +5252,12 @@ do
                 frame.Parent = getgenv().HideScreenGUI
             
                 local textLabel = Instance.new("TextLabel")
-                textLabel.Name = "\nhideuiHolyServices"
+                textLabel.Name = "\nhideuiEuphoriacc"
                 textLabel.Size = UDim2.new(0, 400, 0, 100)
                 textLabel.Font = Enum.Font.SourceSansBold
                 textLabel.RichText = true
-                textLabel.Text = 'HolyServices\n' .. Title
-                textLabel.TextColor3 = Color3.fromRGB(160, 32, 240)
+                textLabel.Text = '<font color="rgb(57, 255, 20)">Euphoria.</font>cc\n' .. Title
+                textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
                 textLabel.BackgroundTransparency = 1
                 textLabel.TextSize = 36
                 textLabel.TextStrokeTransparency = 0.8 
@@ -5268,7 +5276,7 @@ do
                             local timeLeft = endTime - tick()
 
                             textLabel.Text = string.format(
-                                'HolyServices\n%s\nplease wait : <font color="rgb(160,32,240)">%.2f</font> seconds',
+                                '<font color="rgb(57, 255, 20)">Euphoria</font>cc\n%s\nplease wait : <font color="rgb(57, 255, 20)">%.2f</font> seconds',
                                 Title, math.max(timeLeft, 0)
                             )
 
@@ -5523,24 +5531,28 @@ local Fonts = {}; do
         return getcustomasset(library.directory.."/fonts/"..Name .. ".font");
     end
     
-    local Tahoma = RegisterFont("Tahoma", 400, "Normal", {
+local Tahoma = RegisterFont("Tahoma", 400, "Normal", {
         Id = "Tahoma.ttf",
         Font = game:HttpGet("https://github.com/KingVonOBlockJoyce/OctoHook-UI/raw/refs/heads/main/fs-tahoma-8px%20(3).ttf"),
+        Color = Color3.fromRGB(255, 105, 180), -- Hot Pink
     })
 
     local Pixel = RegisterFont("Pixel", 400, "Normal", {
         Id = "Pixel.ttf",
         Font = game:HttpGet("https://github.com/KingVonOBlockJoyce/vaderpaste.luau/raw/refs/heads/main/Pixel.ttf"),
+        Color = Color3.fromRGB(255, 105, 180), -- Hot Pink
     })
 
     local Minecraftia = RegisterFont("Minecraftia", 400, "Normal", {
         Id = "Minecraftia.ttf",
         Font = game:HttpGet("https://github.com/i77lhm/storage/raw/refs/heads/main/fonts/Minecraftia-Regular.ttf"),
+        Color = Color3.fromRGB(255, 105, 180), -- Hot Pink
     }) 
 
     local Verdana = RegisterFont("Verdana", 400, "Normal", {
         Id = "Verdana.ttf",
         Font = game:HttpGet("https://github.com/i77lhm/storage/raw/refs/heads/main/fonts/Verdana-Font.ttf"),
+        Color = Color3.fromRGB(255, 105, 180), -- Hot Pink
     })
 
     Fonts["Plex"] = Font.new(Tahoma, Enum.FontWeight.Regular, Enum.FontStyle.Normal);
@@ -5578,7 +5590,7 @@ do
             return _Instance;
         end
         --
-        Functions.FadeOutOnDist = LPH_NO_VIRTUALIZE(function(element, distance)
+        Functions.EuphoriaOutOnDist = LPH_NO_VIRTUALIZE(function(element, distance)
             local transparency = math.max(0.1, 1 - (distance / Config.ESP.MaxDistance))
             if element:IsA("TextLabel") then
                 element.TextTransparency = 1 - transparency
@@ -5659,9 +5671,9 @@ do
             if plr == lplayer then return end
 
             coroutine.wrap(DupeCheck)(plr)
-            local Name = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, -11), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
-            local Distance = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 11), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
-            local Weapon = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 31), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true, Text = "None"})
+            local Name = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, -11), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
+            local Distance = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 11), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true})
+            local Weapon = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 31), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), RichText = true, Text = "None"})
             local Box = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Color3.fromRGB(0, 0, 0), BackgroundTransparency = 0.75, BorderSizePixel = 0})
             local Gradient1 = Functions:Create("UIGradient", {Parent = Box, Enabled = Config.ESP.Drawing.Boxes.GradientFill, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Config.ESP.Drawing.Boxes.GradientFillRGB1), ColorSequenceKeypoint.new(1, Config.ESP.Drawing.Boxes.GradientFillRGB2)}})
             local Outline = Functions:Create("UIStroke", {Parent = Box, Enabled = Config.ESP.Drawing.Boxes.Gradient, Transparency = 0, Color = Color3.fromRGB(255, 255, 255), LineJoinMode = Enum.LineJoinMode.Miter})
@@ -5669,8 +5681,8 @@ do
             local Healthbar = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Color3.fromRGB(255, 255, 255), BackgroundTransparency = 0})
             local BehindHealthbar = Functions:Create("Frame", {BorderColor3 = Color3.fromRGB(0, 0, 0), Parent = ScreenGui, ZIndex = -1, BackgroundColor3 = Color3.fromRGB(0, 0, 0), BackgroundTransparency = 0})
             local HealthbarGradient = Functions:Create("UIGradient", {Parent = Healthbar, Enabled = Config.ESP.Drawing.Healthbar.Gradient, Rotation = -90, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Config.ESP.Drawing.Healthbar.GradientRGB1), ColorSequenceKeypoint.new(1, Config.ESP.Drawing.Healthbar.GradientRGB2)}})
-            local HealthText = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 31), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), ZIndex = 500})
-            local Chams = Functions:Create("Highlight", {Parent = ScreenGui, FillTransparency = 1, OutlineTransparency = 0, OutlineColor = Color3.fromRGB(255, 0, 0), DepthMode = "AlwaysOnTop"})
+            local HealthText = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(0.5, 0, 0, 31), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0), ZIndex = 500})
+            local Chams = Functions:Create("Highlight", {Parent = ScreenGui, FillTransparency = 1, OutlineTransparency = 0, OutlineColor = Color3.fromRGB(255, 105, 180), DepthMode = "AlwaysOnTop"})
             local WeaponIcon = Functions:Create("ImageLabel", {Parent = ScreenGui, BackgroundTransparency = 1, BorderColor3 = Color3.fromRGB(0, 0, 0), BorderSizePixel = 0, Size = UDim2.new(0, 40, 0, 40)})
             local Gradient3 = Functions:Create("UIGradient", {Parent = WeaponIcon, Rotation = -90, Enabled = Config.ESP.Drawing.Weapons.Gradient, Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Config.ESP.Drawing.Weapons.GradientRGB1), ColorSequenceKeypoint.new(1, Config.ESP.Drawing.Weapons.GradientRGB2)}})
             local LeftTop = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Config.ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0), BorderSizePixel = 0, BorderColor3 = Color3.new(0,0,0)})
@@ -5681,9 +5693,9 @@ do
             local BottomDown = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Config.ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0), BorderSizePixel = 0, BorderColor3 = Color3.new(0,0,0)})
             local BottomRightSide = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Config.ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0), BorderSizePixel = 0, BorderColor3 = Color3.new(0,0,0)})
             local BottomRightDown = Functions:Create("Frame", {Parent = ScreenGui, BackgroundColor3 = Config.ESP.Drawing.Boxes.Corner.RGB, Position = UDim2.new(0, 0, 0, 0), BorderSizePixel = 0, BorderColor3 = Color3.new(0,0,0)})
-            local Flag1 = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(1, 0, 0, 0), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
-            local Flag2 = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(1, 0, 0, 0), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
-            --local DroppedItems = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(160, 32, 240), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+            local Flag1 = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(1, 0, 0, 0), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+            local Flag2 = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, Position = UDim2.new(1, 0, 0, 0), Size = UDim2.new(0, 100, 0, 20), AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
+            --local DroppedItems = Functions:Create("TextLabel", {Visible = false,Parent = ScreenGui, AnchorPoint = Vector2.new(0.5, 0.5), BackgroundTransparency = 1, TextColor3 = Color3.fromRGB(255, 255, 255), Font = Enum.Font.Code, TextSize = Config.ESP.FontSize, TextStrokeTransparency = 0, TextStrokeColor3 = Color3.fromRGB(0, 0, 0)})
             --
             Functions.AddOutline(LeftTop, 1); Functions.AddOutline(LeftSide, 1); Functions.AddOutline(LeftSide, 1); Functions.AddOutline(RightTop, 1); Functions.AddOutline(RightSide, 1); Functions.AddOutline(BottomSide, 1); Functions.AddOutline(BottomDown, 1); Functions.AddOutline(BottomRightSide, 1); Functions.AddOutline(BottomRightDown, 1); 
             if not plr.Character then plr.CharacterAdded:Wait() end
@@ -5913,28 +5925,28 @@ do
                                 
                                 w, h = 3 * scaleFactor, 4.5 * scaleFactor
 
-                                -- Fade-out effect --
-                                if Config.ESP.FadeOut.OnDistance then
-                                    Functions.FadeOutOnDist(Box, Dist)
-                                    Functions.FadeOutOnDist(Outline, Dist)
-                                    Functions.FadeOutOnDist(Name, Dist)
-                                    Functions.FadeOutOnDist(Distance, Dist)
-                                    Functions.FadeOutOnDist(Weapon, Dist)
-                                    Functions.FadeOutOnDist(Healthbar, Dist)
-                                    Functions.FadeOutOnDist(BehindHealthbar, Dist)
-                                    Functions.FadeOutOnDist(HealthText, Dist)
-                                    Functions.FadeOutOnDist(WeaponIcon, Dist)
-                                    Functions.FadeOutOnDist(LeftTop, Dist)
-                                    Functions.FadeOutOnDist(LeftSide, Dist)
-                                    Functions.FadeOutOnDist(BottomSide, Dist)
-                                    Functions.FadeOutOnDist(BottomDown, Dist)
-                                    Functions.FadeOutOnDist(RightTop, Dist)
-                                    Functions.FadeOutOnDist(RightSide, Dist)
-                                    Functions.FadeOutOnDist(BottomRightSide, Dist)
-                                    Functions.FadeOutOnDist(BottomRightDown, Dist)
-                                    Functions.FadeOutOnDist(Chams, Dist)
-                                    Functions.FadeOutOnDist(Flag1, Dist)
-                                    Functions.FadeOutOnDist(Flag2, Dist)
+                                -- Euphoria-out effect --
+                                if Config.ESP.EuphoriaOut.OnDistance then
+                                    Functions.EuphoriaOutOnDist(Box, Dist)
+                                    Functions.EuphoriaOutOnDist(Outline, Dist)
+                                    Functions.EuphoriaOutOnDist(Name, Dist)
+                                    Functions.EuphoriaOutOnDist(Distance, Dist)
+                                    Functions.EuphoriaOutOnDist(Weapon, Dist)
+                                    Functions.EuphoriaOutOnDist(Healthbar, Dist)
+                                    Functions.EuphoriaOutOnDist(BehindHealthbar, Dist)
+                                    Functions.EuphoriaOutOnDist(HealthText, Dist)
+                                    Functions.EuphoriaOutOnDist(WeaponIcon, Dist)
+                                    Functions.EuphoriaOutOnDist(LeftTop, Dist)
+                                    Functions.EuphoriaOutOnDist(LeftSide, Dist)
+                                    Functions.EuphoriaOutOnDist(BottomSide, Dist)
+                                    Functions.EuphoriaOutOnDist(BottomDown, Dist)
+                                    Functions.EuphoriaOutOnDist(RightTop, Dist)
+                                    Functions.EuphoriaOutOnDist(RightSide, Dist)
+                                    Functions.EuphoriaOutOnDist(BottomRightSide, Dist)
+                                    Functions.EuphoriaOutOnDist(BottomRightDown, Dist)
+                                    Functions.EuphoriaOutOnDist(Chams, Dist)
+                                    Functions.EuphoriaOutOnDist(Flag1, Dist)
+                                    Functions.EuphoriaOutOnDist(Flag2, Dist)
                                 end
                                 
                                 -- Teamcheck
@@ -6240,12 +6252,12 @@ if not Mobile then
 -- Library init
     local themes = {
         preset = {
-            accent = rgb(0, 162, 255),
+            accent = rgb(255, 105, 180),
         }, 
 
         utility = {
             accent = {
-                BackgroundColor3 = {},  
+                BackgroundColor3 = {}, 	
                 TextColor3 = {}, 
                 ImageColor3 = {}, 
                 ScrollBarImageColor3 = {} 
@@ -6824,7 +6836,7 @@ if not Mobile then
                     SliceCenter = rect(vec2(112, 112), vec2(147, 147))
                 });
                 
-                items[ "global_fade" ] = library:create( "Frame" , {
+                items[ "global_Euphoria" ] = library:create( "Frame" , {
                     Parent = items[ "main" ];
                     Name = "\0";
                     BackgroundTransparency = 1;
@@ -7171,12 +7183,12 @@ if not Mobile then
                         -- data.left = multi_items[ "left" ]
                         -- data.right = multi_items[ "right" ]
 
-                                                function data.open_page()
-                                                        local page = cfg.current_multi; 
+						function data.open_page()
+							local page = cfg.current_multi; 
                             
                             if page and page.text ~= data.text then 
-                                self.items[ "global_fade" ].BackgroundTransparency = 0
-                                library:tween(self.items[ "global_fade" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
+                                self.items[ "global_Euphoria" ].BackgroundTransparency = 0
+                                library:tween(self.items[ "global_Euphoria" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
                                 
                                 local old_size = page.page.Size
                                 page.page.Size = dim2(1, -20, 1, -20)
@@ -7202,13 +7214,13 @@ if not Mobile then
                             cfg.current_multi = data
 
                             library:close_element()
-                                                end
+						end
 
-                                                multi_items[ "button" ].MouseButton1Down:Connect(function()
-                                                        data.open_page() 
-                                                end)
+						multi_items[ "button" ].MouseButton1Down:Connect(function()
+							data.open_page() 
+						end)
 
-                                                cfg.pages[#cfg.pages + 1] = setmetatable(data, library)
+						cfg.pages[#cfg.pages + 1] = setmetatable(data, library)
                     end 
 
                     cfg.pages[1].open_page()
@@ -7220,9 +7232,9 @@ if not Mobile then
                 
                 if selected_tab then 
                     if selected_tab[ 4 ] ~= items[ "tab_holder" ] then 
-                        self.items[ "global_fade" ].BackgroundTransparency = 0
+                        self.items[ "global_Euphoria" ].BackgroundTransparency = 0
                         
-                        library:tween(self.items[ "global_fade" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
+                        library:tween(self.items[ "global_Euphoria" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
                         selected_tab[ 4 ].Size = dim2(1, -216, 1, -101)
                     end
 
@@ -7571,7 +7583,7 @@ if not Mobile then
                         CornerRadius = dim(0, 7)
                     });
                 
-                    items[ "fade" ] = library:create( "Frame" , {
+                    items[ "Euphoria" ] = library:create( "Frame" , {
                         Parent = items[ "outline" ];
                         BackgroundTransparency = 0.800000011920929;
                         Name = "\0";
@@ -7582,7 +7594,7 @@ if not Mobile then
                     });
                     
                     library:create( "UICorner" , {
-                        Parent = items[ "fade" ];
+                        Parent = items[ "Euphoria" ];
                         CornerRadius = dim(0, 7)
                     });
                 end 
@@ -7598,7 +7610,7 @@ if not Mobile then
                     library:tween(items[ "toggle" ], {BackgroundColor3 = bool and themes.preset.accent or rgb(58, 58, 62)}, Enum.EasingStyle.Quad)
                     library:tween(items[ "toggle_outline" ], {BackgroundColor3 = bool and themes.preset.accent or rgb(50, 50, 50)}, Enum.EasingStyle.Quad)
                     library:tween(items[ "toggle_circle" ], {BackgroundColor3 = bool and rgb(255, 255, 255) or rgb(86, 86, 88), Position = bool and dim2(1, -14, 0, 2) or dim2(0, 2, 0, 2)}, Enum.EasingStyle.Quad)
-                    library:tween(items[ "fade" ], {BackgroundTransparency = bool and 1 or 0.8}, Enum.EasingStyle.Quad)
+                    library:tween(items[ "Euphoria" ], {BackgroundTransparency = bool and 1 or 0.8}, Enum.EasingStyle.Quad)
                 end 
             end 
 
@@ -7851,7 +7863,7 @@ if not Mobile then
                 cfg.set(cfg.enabled)
             end)
             
-            if cfg.seperator then -- ok bro my lua either sucks or this was a pain in the ass to make (simple if statement aswell 💔)
+            if cfg.seperator then -- ok bro my lua either sucks or this was a pain in the ass to make (simple if statement aswell ￰ﾟﾒﾔ)
                 library:create( "Frame" , {
                     AnchorPoint = vec2(0, 1);
                     Parent = self.items[ "elements" ];
@@ -8391,7 +8403,7 @@ if not Mobile then
                                 insert(cfg.multi_items, button.Text)
                             end
                             
-                            cfg.set(cfg.multi_items)                            
+                            cfg.set(cfg.multi_items) 				
                         else 
                             cfg.set_visible(false)
                             cfg.open = false 
@@ -8624,7 +8636,7 @@ if not Mobile then
                         BackgroundColor3 = rgb(25, 25, 29)
                     });
 
-                    items[ "colorpicker_fade" ] = library:create( "Frame" , {
+                    items[ "colorpicker_Euphoria" ] = library:create( "Frame" , {
                         Parent = items[ "colorpicker_holder" ];
                         Name = "\0";
                         BackgroundTransparency = 0;
@@ -8747,7 +8759,7 @@ if not Mobile then
                     });
                     
                     library:create( "UIGradient" , {
-                        Color = rgbseq{rgbkey(0, rgb(255, 0, 0)), rgbkey(0.17, rgb(255, 255, 0)), rgbkey(0.33, rgb(0, 255, 0)), rgbkey(0.5, rgb(0, 255, 255)), rgbkey(0.67, rgb(255, 0, 0)), rgbkey(0.83, rgb(255, 0, 255)), rgbkey(1, rgb(255, 0, 0))};
+                        Color = rgbseq{rgbkey(0, rgb(255, 0, 0)), rgbkey(0.17, rgb(255, 255, 0)), rgbkey(0.33, rgb(0, 255, 0)), rgbkey(0.5, rgb(0, 255, 255)), rgbkey(0.67, rgb(0, 0, 255)), rgbkey(0.83, rgb(255, 0, 255)), rgbkey(1, rgb(255, 0, 0))};
                         Parent = items[ "hue_gradient" ]
                     });
                     
@@ -8892,11 +8904,11 @@ if not Mobile then
             end;
 
             function cfg.set_visible(bool)
-                items[ "colorpicker_fade" ].BackgroundTransparency = 0
+                items[ "colorpicker_Euphoria" ].BackgroundTransparency = 0
                 items[ "colorpicker_holder" ].Parent = bool and library[ "items" ] or library[ "other" ]
                 items[ "colorpicker_holder" ].Position = dim_offset(items[ "colorpicker" ].AbsolutePosition.X, items[ "colorpicker" ].AbsolutePosition.Y + items[ "colorpicker" ].AbsoluteSize.Y + 45)
 
-                library:tween(items[ "colorpicker_fade" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
+                library:tween(items[ "colorpicker_Euphoria" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
                 library:tween(items[ "colorpicker_holder" ], {Position = items[ "colorpicker_holder" ].Position + dim_offset(0, 20)}) -- p100 check
                 
                 if not (self.sanity and library.current_open == self and self.open) then 
@@ -8951,7 +8963,7 @@ if not Mobile then
                 local mouse = uis:GetMouseLocation() 
                 local offset = vec2(mouse.X, mouse.Y - gui_offset) 
 
-                if dragging_sat then    
+                if dragging_sat then	
                     s = math.clamp((offset - items["sat"].AbsolutePosition).X / items["sat"].AbsoluteSize.X, 0, 1)
                     v = 1 - math.clamp((offset - items["sat"].AbsolutePosition).Y / items["sat"].AbsoluteSize.Y, 0, 1)
                 elseif dragging_hue then
@@ -9358,7 +9370,7 @@ if not Mobile then
                 -- 
             end 
 
-            if cfg.seperator then -- ok bro my lua either sucks or this was a pain in the ass to make (simple if statement aswell 💔)
+            if cfg.seperator then -- ok bro my lua either sucks or this was a pain in the ass to make (simple if statement aswell ￰ﾟﾒﾔ)
                 library:create( "Frame" , {
                     AnchorPoint = vec2(0, 1);
                     Parent = self.items[ "elements" ];
@@ -9370,7 +9382,7 @@ if not Mobile then
                 });
             end
             
-            function cfg.modify_mode_color(path) -- ts so frikin tuff 💀
+            function cfg.modify_mode_color(path) -- ts so frikin tuff ￰ﾟﾒﾀ
                 for _, v in cfg.hold_instances do 
                     v.TextColor3 = rgb(72, 72, 72)
                 end 
@@ -9401,7 +9413,7 @@ if not Mobile then
                 elseif tostring(input):find("Enum") then 
                     input = input.Name == "Escape" and "NONE" or input
                     
-                    cfg.key = input or "NONE"   
+                    cfg.key = input or "NONE"	
                 elseif find({"Toggle", "Hold", "Always"}, input) then 
                     if input == "Always" then 
                         cfg.active = true 
@@ -9446,7 +9458,7 @@ if not Mobile then
         
             items[ "keybind_holder" ].MouseButton1Down:Connect(function()
                 task.wait()
-                items[ "key" ].Text = "..."     
+                items[ "key" ].Text = "..."	
 
                 cfg.binding = library:connection(uis.InputBegan, function(keycode, game_event)  
                     cfg.set(keycode.KeyCode ~= Enum.KeyCode.Unknown and keycode.KeyCode or keycode.UserInputType)
@@ -9627,7 +9639,7 @@ if not Mobile then
                 });
                 
                 library:create( "UICorner" , {
-                    Parent = items[ "fade" ];
+                    Parent = items[ "Euphoria" ];
                     CornerRadius = dim(0, 7)
                 });
                 
@@ -9866,7 +9878,7 @@ if not Mobile then
         
                 if Server.id == game.JobId then
                     library.notifications:create_notification({
-                        name = "HolyServices",
+                        name = "Euphoria",
                         info = `You are currently in the smallest server!`,
                         lifetime = 10
                     })
@@ -10005,7 +10017,7 @@ if not Mobile then
             return offset
         end
         
-        function notifications:fade(path, is_fading)
+        function notifications:Euphoria(path, is_fading)
             local fading = is_fading and 1 or 0 
             
             library:tween(path, {BackgroundTransparency = fading}, Enum.EasingStyle.Quad, 1)
@@ -10125,7 +10137,7 @@ if not Mobile then
             local index = #notifications.notifs + 1
             notifications.notifs[index] = items[ "notification" ]
 
-            notifications:fade(items[ "notification" ], false)
+            notifications:Euphoria(items[ "notification" ], false)
             
             local offset = notifications:refresh_notifs()
 
@@ -10139,7 +10151,7 @@ if not Mobile then
                 
                 notifications.notifs[index] = nil
                 
-                notifications:fade(items[ "notification" ], true)
+                notifications:Euphoria(items[ "notification" ], true)
                 
                 library:tween(items[ "notification" ], {AnchorPoint = vec2(1, 0)}, Enum.EasingStyle.Quad, 1)
 
@@ -10218,12 +10230,12 @@ if not Mobile then
 
     local themes = {
         preset = {
-            accent = rgb(0, 162, 255),
+            accent = rgb(57, 255, 20),
         }, 
 
         utility = {
             accent = {
-                BackgroundColor3 = {},  
+                BackgroundColor3 = {}, 	
                 TextColor3 = {}, 
                 ImageColor3 = {}, 
                 ScrollBarImageColor3 = {} 
@@ -10778,7 +10790,7 @@ if not Mobile then
                     SliceCenter = rect(vec2(112, 112), vec2(147, 147))
                 });
                 
-                items[ "global_fade" ] = library:create( "Frame" , {
+                items[ "global_Euphoria" ] = library:create( "Frame" , {
                     Parent = items[ "main" ];
                     Name = "\0";
                     BackgroundTransparency = 1;
@@ -11169,12 +11181,12 @@ if not Mobile then
                         -- data.left = multi_items[ "left" ]
                         -- data.right = multi_items[ "right" ]
 
-                                                function data.open_page()
-                                                        local page = cfg.current_multi; 
+						function data.open_page()
+							local page = cfg.current_multi; 
                             
                             if page and page.text ~= data.text then 
-                                self.items[ "global_fade" ].BackgroundTransparency = 0
-                                library:tween(self.items[ "global_fade" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
+                                self.items[ "global_Euphoria" ].BackgroundTransparency = 0
+                                library:tween(self.items[ "global_Euphoria" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
                                 
                                 local old_size = page.page.Size
                                 page.page.Size = dim2(1, -20, 1, -20)
@@ -11200,14 +11212,14 @@ if not Mobile then
                             cfg.current_multi = data
 
                             library:close_element()
-                                                end
+						end
 
-                                                multi_items[ "button" ].InputBegan:Connect(function(Input)
+						multi_items[ "button" ].InputBegan:Connect(function(Input)
                             if Input.UserInputType ~= Enum.UserInputType.Touch then return end
-                                                        data.open_page() 
-                                                end)
+							data.open_page() 
+						end)
 
-                                                cfg.pages[#cfg.pages + 1] = setmetatable(data, library)
+						cfg.pages[#cfg.pages + 1] = setmetatable(data, library)
                     end 
 
                     cfg.pages[1].open_page()
@@ -11219,9 +11231,9 @@ if not Mobile then
                 
                 if selected_tab then 
                     if selected_tab[ 4 ] ~= items[ "tab_holder" ] then 
-                        self.items[ "global_fade" ].BackgroundTransparency = 0
+                        self.items[ "global_Euphoria" ].BackgroundTransparency = 0
                         
-                        library:tween(self.items[ "global_fade" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
+                        library:tween(self.items[ "global_Euphoria" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
                         selected_tab[ 4 ].Size = dim2(1, -216, 1, -101)
                     end
 
@@ -11571,7 +11583,7 @@ if not Mobile then
                         CornerRadius = dim(0, 7)
                     });
                 
-                    items[ "fade" ] = library:create( "Frame" , {
+                    items[ "Euphoria" ] = library:create( "Frame" , {
                         Parent = items[ "outline" ];
                         BackgroundTransparency = 0.800000011920929;
                         Name = "\0";
@@ -11582,7 +11594,7 @@ if not Mobile then
                     });
                     
                     library:create( "UICorner" , {
-                        Parent = items[ "fade" ];
+                        Parent = items[ "Euphoria" ];
                         CornerRadius = dim(0, 7)
                     });
                 end 
@@ -11600,7 +11612,7 @@ if not Mobile then
                     library:tween(items[ "toggle" ], {BackgroundColor3 = bool and themes.preset.accent or rgb(58, 58, 62)}, Enum.EasingStyle.Quad)
                     library:tween(items[ "toggle_outline" ], {BackgroundColor3 = bool and themes.preset.accent or rgb(50, 50, 50)}, Enum.EasingStyle.Quad)
                     library:tween(items[ "toggle_circle" ], {BackgroundColor3 = bool and rgb(255, 255, 255) or rgb(86, 86, 88), Position = bool and dim2(1, -14, 0, 2) or dim2(0, 2, 0, 2)}, Enum.EasingStyle.Quad)
-                    library:tween(items[ "fade" ], {BackgroundTransparency = bool and 1 or 0.8}, Enum.EasingStyle.Quad)
+                    library:tween(items[ "Euphoria" ], {BackgroundTransparency = bool and 1 or 0.8}, Enum.EasingStyle.Quad)
                 end 
             end 
 
@@ -11855,7 +11867,7 @@ if not Mobile then
                 cfg.set(cfg.enabled)
             end)
             
-            if cfg.seperator then -- ok bro my lua either sucks or this was a pain in the ass to make (simple if statement aswell 💔)
+            if cfg.seperator then -- ok bro my lua either sucks or this was a pain in the ass to make (simple if statement aswell ￰ﾟﾒﾔ)
                 library:create( "Frame" , {
                     AnchorPoint = vec2(0, 1);
                     Parent = self.items[ "elements" ];
@@ -12393,7 +12405,7 @@ if not Mobile then
                                 insert(cfg.multi_items, button.Text)
                             end
                             
-                            cfg.set(cfg.multi_items)                            
+                            cfg.set(cfg.multi_items) 				
                         else 
                             cfg.set_visible(false)
                             cfg.open = false 
@@ -12625,7 +12637,7 @@ if not Mobile then
                         BackgroundColor3 = rgb(25, 25, 29)
                     });
 
-                    items[ "colorpicker_fade" ] = library:create( "Frame" , {
+                    items[ "colorpicker_Euphoria" ] = library:create( "Frame" , {
                         Parent = items[ "colorpicker_holder" ];
                         Name = "\0";
                         BackgroundTransparency = 0;
@@ -12748,7 +12760,7 @@ if not Mobile then
                     });
                     
                     library:create( "UIGradient" , {
-                        Color = rgbseq{rgbkey(0, rgb(255, 0, 0)), rgbkey(0.17, rgb(255, 255, 0)), rgbkey(0.33, rgb(0, 255, 0)), rgbkey(0.5, rgb(0, 255, 255)), rgbkey(0.67, rgb(255, 0, 0)), rgbkey(0.83, rgb(255, 0, 255)), rgbkey(1, rgb(255, 0, 0))};
+                        Color = rgbseq{rgbkey(0, rgb(255, 0, 0)), rgbkey(0.17, rgb(255, 255, 0)), rgbkey(0.33, rgb(0, 255, 0)), rgbkey(0.5, rgb(0, 255, 255)), rgbkey(0.67, rgb(0, 0, 255)), rgbkey(0.83, rgb(255, 0, 255)), rgbkey(1, rgb(255, 0, 0))};
                         Parent = items[ "hue_gradient" ]
                     });
                     
@@ -12893,11 +12905,11 @@ if not Mobile then
             end;
 
             function cfg.set_visible(bool)
-                items[ "colorpicker_fade" ].BackgroundTransparency = 0
+                items[ "colorpicker_Euphoria" ].BackgroundTransparency = 0
                 items[ "colorpicker_holder" ].Parent = bool and library[ "items" ] or library[ "other" ]
                 items[ "colorpicker_holder" ].Position = dim_offset(items[ "colorpicker" ].AbsolutePosition.X, items[ "colorpicker" ].AbsolutePosition.Y + items[ "colorpicker" ].AbsoluteSize.Y + 45)
 
-                library:tween(items[ "colorpicker_fade" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
+                library:tween(items[ "colorpicker_Euphoria" ], {BackgroundTransparency = 1}, Enum.EasingStyle.Quad, 0.4)
                 library:tween(items[ "colorpicker_holder" ], {Position = items[ "colorpicker_holder" ].Position + dim_offset(0, 20)}) -- p100 check
                 
                 if not (self.sanity and library.current_open == self and self.open) then 
@@ -12952,7 +12964,7 @@ if not Mobile then
                 local mouse = uis:GetMouseLocation() 
                 local offset = vec2(mouse.X, mouse.Y - gui_offset) 
 
-                if dragging_sat then    
+                if dragging_sat then	
                     s = math.clamp((offset - items["sat"].AbsolutePosition).X / items["sat"].AbsoluteSize.X, 0, 1)
                     v = 1 - math.clamp((offset - items["sat"].AbsolutePosition).Y / items["sat"].AbsoluteSize.Y, 0, 1)
                 elseif dragging_hue then
@@ -13363,7 +13375,7 @@ if not Mobile then
                 -- 
             end 
             
-            function cfg.modify_mode_color(path) -- ts so frikin tuff 💀
+            function cfg.modify_mode_color(path) -- ts so frikin tuff ￰ﾟﾒﾀ
                 for _, v in cfg.hold_instances do 
                     v.TextColor3 = rgb(72, 72, 72)
                 end 
@@ -13394,7 +13406,7 @@ if not Mobile then
                 elseif tostring(input):find("Enum") then 
                     input = input.Name == "Escape" and "NONE" or input
                     
-                    cfg.key = input or "NONE"   
+                    cfg.key = input or "NONE"	
                 elseif find({"Toggle", "Hold", "Always"}, input) then 
                     if input == "Always" then 
                         cfg.active = true 
@@ -13440,7 +13452,7 @@ if not Mobile then
             items[ "keybind_holder" ].InputBegan:Connect(function(Input)
                             if Input.UserInputType ~= Enum.UserInputType.Touch then return end
                 task.wait()
-                items[ "key" ].Text = "..."     
+                items[ "key" ].Text = "..."	
 
                 cfg.binding = library:connection(uis.InputBegan, function(keycode, game_event)  
                     cfg.set(keycode.KeyCode ~= Enum.KeyCode.Unknown and keycode.KeyCode or keycode.UserInputType)
@@ -13628,7 +13640,7 @@ if not Mobile then
                 });
                 
                 library:create( "UICorner" , {
-                    Parent = items[ "fade" ];
+                    Parent = items[ "Euphoria" ];
                     CornerRadius = dim(0, 7)
                 });
                 
@@ -13812,7 +13824,7 @@ if not Mobile then
             return offset
         end
         
-        function notifications:fade(path, is_fading)
+        function notifications:Euphoria(path, is_fading)
             local fading = is_fading and 1 or 0 
             
             library:tween(path, {BackgroundTransparency = fading}, Enum.EasingStyle.Quad, 1)
@@ -13937,7 +13949,7 @@ if not Mobile then
             local index = #notifications.notifs + 1
             notifications.notifs[index] = items[ "notification" ]
 
-            notifications:fade(items[ "notification" ], false)
+            notifications:Euphoria(items[ "notification" ], false)
             
             local offset = notifications:refresh_notifs()
 
@@ -13951,7 +13963,7 @@ if not Mobile then
                 
                 notifications.notifs[index] = nil
                 
-                notifications:fade(items[ "notification" ], true)
+                notifications:Euphoria(items[ "notification" ], true)
                 
                 library:tween(items[ "notification" ], {AnchorPoint = vec2(1, 0)}, Enum.EasingStyle.Quad, 1)
 
@@ -13965,7 +13977,7 @@ if not Mobile then
     end
 -- \\ Script
 
-local window = library:window({name = "HolyServices", suffix = "", gameInfo = string.format("HolyServices : %s", Game_Name:lower())})
+local window = library:window({name = "Euphoria", suffix = "", gameInfo = string.format("Euphoria : %s", Game_Name:lower())})
 
 if Game_Name == "The Bronx" then
     window:seperator({name = "Game"}) do
@@ -14006,7 +14018,7 @@ if Game_Name == "The Bronx" then
                         pcall(Teleport, OldCFrame)
 
                         library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `Successfully safed {state}!`,
                             lifetime = 5
                         })
@@ -14048,7 +14060,7 @@ if Game_Name == "The Bronx" then
                         pcall(Teleport, OldCFrame)
 
                         library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `Successfully took {state} from safe!`,
                             lifetime = 5
                         })
@@ -14151,26 +14163,7 @@ if Game_Name == "The Bronx" then
                         Config.TheBronx.PlayerModifications[Index:gsub(" ", "")] = state
                     end})
                 end
-                -- AUTO DROP 10K FUNCTIONALITY
-                getgenv().MoneyDropEnabled = false
 
-                task.spawn(function()
-                    while task.wait(0.3) do  
-                        if getgenv().MoneyDropEnabled then
-                            local args = {
-                                "Drop",
-                                "10000"
-                            }
-                            pcall(function()
-                                game:GetService("ReplicatedStorage"):WaitForChild("BankProcessRemote"):InvokeServer(unpack(args))
-                            end)
-                        end
-                    end
-                end)
-
-                LocalPlayerModsSection:toggle({type = "toggle", name = "Auto Drop 10K", flag = "AutoDrop10K", default = false, callback = function(state)
-                    getgenv().MoneyDropEnabled = state
-                end})
                 LocalPlayerColumn = LocalPlayerTab:column({})
                 local CharacterModsSection = LocalPlayerColumn:section({name = "Character Modifications", side = "right", size = 0.645, icon = GetImage("Wrench.png")})
 
@@ -14435,7 +14428,7 @@ if Game_Name == "The Bronx" then
                 ManualFarmSections:button({name = "Clean All Filthy Money", callback = LPH_NO_VIRTUALIZE(function()
                     if LocalPlayer.stored.FilthyStack.Value == 0 then 
                         return library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `You have no fucking money poor fuck!`,
                             lifetime = 7.5
                         })
@@ -14448,7 +14441,7 @@ if Game_Name == "The Bronx" then
                     
                     if not Cleaner then
                         return library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `Could not find a valid cleaner!`,
                             lifetime = 7.5
                         })
@@ -14512,7 +14505,7 @@ if Game_Name == "The Bronx" then
                     task.spawn(function()
                         if Cooldown then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Please wait!`,
                                 lifetime = 5
                             })
@@ -14526,7 +14519,7 @@ if Game_Name == "The Bronx" then
 
                         if not Tool then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Could not find a tool! you must hold one.`,
                                 lifetime = 10
                             })
@@ -14603,7 +14596,7 @@ if Game_Name == "The Bronx" then
                     local Found, Cup = GetFruitCup()
 
                     if Cup and Found then
-                        HideUI("generating illegal cash 💷\n please wait.")
+                        HideUI("generating illegal cash ￰ﾟﾒﾷ\n please wait.")
 
                         local OLDCFrame = LocalPlayer.Character.HumanoidRootPart.CFrame
 
@@ -14629,7 +14622,7 @@ if Game_Name == "The Bronx" then
                         return
                     end
 
-                    HideUI("buying products 🍉\nif you are stuck here, PLEASE WAIT!!")
+                    HideUI("buying products ￰ﾟﾍﾉ\nif you are stuck here, PLEASE WAIT!!")
 
                     local OLDCFrame = LocalPlayer.Character.HumanoidRootPart.CFrame
 
@@ -14664,7 +14657,7 @@ if Game_Name == "The Bronx" then
                     if Check then
                         DeleteSecretUI()
                         library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `Could not find items! Please check you have more than 5000$.`,
                             lifetime = 10
                         })
@@ -14673,7 +14666,7 @@ if Game_Name == "The Bronx" then
 
                     DeleteSecretUI()
 
-                    HideUI("generating illegal cash 💷\n this takes around 1-2 minutes.\n please wait.")
+                    HideUI("generating illegal cash ￰ﾟﾒﾷ\n this takes around 1-2 minutes.\n please wait.")
 
                     Teleport(Stove.CookPart.CFrame, true)
 
@@ -14777,7 +14770,7 @@ if Game_Name == "The Bronx" then
                         local Prompt = Workspace:FindFirstChild("GUNS")[self]:FindFirstChildWhichIsA("ProximityPrompt",true);
                         if (Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("GamepassID", true) and not MarketplaceService:UserOwnsGamePassAsync(LocalPlayer.UserId, Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("GamepassID",true).Value)) then 
                             return library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `You do not own this gamepass!`,
                                 lifetime = 5
                             })
@@ -14788,7 +14781,7 @@ if Game_Name == "The Bronx" then
                         local Part = Prompt.Parent:IsA("Part") and Prompt.Parent.CFrame or Prompt.Parent:IsA("MeshPart") and Prompt.Parent.CFrame or Prompt.Parent:IsA("UnionOperation") and Prompt.Parent.CFrame;
                         if LocalPlayer.stored.Money.Value < Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("Price",true).Value then
                             return library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `You are ${Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("Price",true).Value - LocalPlayer.stored.Money.Value} short.`,
                                 lifetime = 5
                             })
@@ -14822,7 +14815,7 @@ if Game_Name == "The Bronx" then
                         task.spawn(Teleport, OldCFrame)
 
                         library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `Successfully purchased {self}!`,
                             lifetime = 5
                         })
@@ -14850,7 +14843,7 @@ if Game_Name == "The Bronx" then
                         Teleport(Config.TheBronx.TeleportationList[state])
 
                         library.notifications:create_notification({
-                            name = "HolyServices",
+                            name = "Euphoria",
                             info = `Successfully teleported to {state}!`,
                             lifetime = 5
                         })
@@ -15082,7 +15075,7 @@ if Game_Name == "South Bronx" then
             end
 
             do -- \\ Teleports
-                local Location_Names = {"Dirty Hobo 💩"; "Active ATM 🏧"}
+                local Location_Names = {"Dirty Hobo ￰ﾟﾒﾩ"; "Active ATM ￰ﾟﾏﾧ"}
 
                 for Index, Value in Config.South_Bronx.Locations do
                     table.insert(Location_Names, Index)
@@ -15131,7 +15124,7 @@ if Game_Name == "South Bronx" then
 
                             if Teleport_Status == "Failed" then
                                 library.notifications:create_notification({
-                                    name = "HolyServices",
+                                    name = "Euphoria",
                                     info = `Failed to purchase {self}!`,
                                     lifetime = 7.5
                                 })
@@ -15158,7 +15151,7 @@ if Game_Name == "South Bronx" then
 
                         if not LocalPlayer.Backpack:FindFirstChild(self) and not LocalPlayer.Character:FindFirstChild(self) then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Failed to purchase {self}!`,
                                 lifetime = 7.5
                             })
@@ -15169,13 +15162,13 @@ if Game_Name == "South Bronx" then
                         if not DidntBuy then
                             if suc then
                                 library.notifications:create_notification({
-                                    name = "HolyServices",
+                                    name = "Euphoria",
                                     info = `Successfully purchased {self}!`,
                                     lifetime = 5
                                 })
                             else
                                 library.notifications:create_notification({
-                                    name = "HolyServices",
+                                    name = "Euphoria",
                                     info = `Failed to purchase item {self} . error : {err}`,
                                     lifetime = 15
                                 })
@@ -15188,7 +15181,7 @@ if Game_Name == "South Bronx" then
 
                 local TeleportListSection = PurchaseGunColumn:section({name = "Teleport To Location", side = "right", size = 1, icon = GetImage("World.png")})
 
-                local Location_Names = {"Dirty Hobo 💩"; "Active ATM 🏧"}
+                local Location_Names = {"Dirty Hobo ￰ﾟﾒﾩ"; "Active ATM ￰ﾟﾏﾧ"}
 
                 for Index, Value in Config.South_Bronx.Locations do
                     table.insert(Location_Names, Index)
@@ -15208,7 +15201,7 @@ if Game_Name == "South Bronx" then
 
                         if TP_Debounce then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Please wait!`,
                                 lifetime = 5
                             })
@@ -15223,22 +15216,22 @@ if Game_Name == "South Bronx" then
                         TP_Debounce = true
 
                         local suc, error = pcall(function()
-                            if Config.South_Bronx.Selected_Location ~= "Dirty Hobo 💩" and Config.South_Bronx.Selected_Location ~= "Active ATM 🏧" then
+                            if Config.South_Bronx.Selected_Location ~= "Dirty Hobo ￰ﾟﾒﾩ" and Config.South_Bronx.Selected_Location ~= "Active ATM ￰ﾟﾏﾧ" then
                             _Position = Config.South_Bronx.Locations[Config.South_Bronx.Selected_Location]
                             Teleport(Config.South_Bronx.Locations[Config.South_Bronx.Selected_Location])
-                            elseif Config.South_Bronx.Selected_Location == "Dirty Hobo 💩" then
-                                if Workspace.HomelessPeople:FindFirstChild("RightLowerLeg", true) then
-                                    local _Hobo = Workspace.HomelessPeople:FindFirstChild("RightLowerLeg", true).CFrame
+                            elseif Config.South_Bronx.Selected_Location == "Dirty Hobo ￰ﾟﾒﾩ" then
+                                if Workspace.Folders.HomelessPeople:FindFirstChild("RightLowerLeg", true) then
+                                    local _Hobo = Workspace.Folders.HomelessPeople:FindFirstChild("RightLowerLeg", true).CFrame
                                     _Position = _Hobo
                                     Teleport(_Hobo)
                                 else
                                     library.notifications:create_notification({
-                                        name = "HolyServices",
+                                        name = "Euphoria",
                                         info = `Failed to locate dirty hobo crackhead!`,
                                         lifetime = 5
                                     })
                                 end
-                            elseif Config.South_Bronx.Selected_Location == "Active ATM 🏧" then
+                            elseif Config.South_Bronx.Selected_Location == "Active ATM ￰ﾟﾏﾧ" then
                                 local ATMPositions = {
                                     ATM1 = CFrame.new(-30, 4, -300);
                                     ATM2 = CFrame.new(539, 4, -353);
@@ -15282,7 +15275,7 @@ if Game_Name == "South Bronx" then
 
                         if (LocalPlayer.Character.HumanoidRootPart.Position - _Position.Position).Magnitude > 20 then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Failed teleported to {state}!`,
                                 lifetime = 7.5
                             })
@@ -15292,13 +15285,13 @@ if Game_Name == "South Bronx" then
 
                         if suc then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Successfully teleported to {state}!`,
                                 lifetime = 5
                             })
                         else
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Teleportation to {state}. error : {err}`,
                                 lifetime = 15
                             })
@@ -15358,7 +15351,7 @@ if Game_Name == "South Bronx" then
 
                         if (LocalPlayer.Character.HumanoidRootPart.Position - Players[Config.South_Bronx.PlayerUtilities.SelectedPlayer].Character.HumanoidRootPart.Position).Magnitude > 20 then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Failed to teleport to {Config.South_Bronx.PlayerUtilities.SelectedPlayer}!`,
                                 lifetime = 7.5
                             })
@@ -15368,13 +15361,13 @@ if Game_Name == "South Bronx" then
 
                         if Success then
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Successfully teleported to {Config.South_Bronx.PlayerUtilities.SelectedPlayer}!`,
                                 lifetime = 7.5
                             })
                         else
                             library.notifications:create_notification({
-                                name = "HolyServices",
+                                name = "Euphoria",
                                 info = `Failed to teleport to {Config.South_Bronx.PlayerUtilities.SelectedPlayer}. Error : {Error}`,
                                 lifetime = 10
                             })
@@ -15516,11 +15509,11 @@ window:seperator({name = "Combat"}) do
 
         local FieldOfViewSettingsSection = SilentAimColumn:section({name = "Field Of View Settings", side = "right", size = 0.3, icon = GetImage("Settings.png")})
 
-        FieldOfViewSettingsSection:slider({name = "Radius", flag = "SilentAim_Radius", min = 0, max = 1000, default = 100, suffix = "°", callback = function(state)
+        FieldOfViewSettingsSection:slider({name = "Radius", flag = "SilentAim_Radius", min = 0, max = 1000, default = 100, suffix = "ￂﾰ", callback = function(state)
             Config.Silent.Radius = state
         end})
 
-        FieldOfViewSettingsSection:slider({name = "Sides", flag = "SilentAim_Sides", min = 3, max = 100, default = 25, suffix = "°", callback = function(state)
+        FieldOfViewSettingsSection:slider({name = "Sides", flag = "SilentAim_Sides", min = 3, max = 100, default = 25, suffix = "ￂﾰ", callback = function(state)
             Config.Silent.Sides = state
         end})
 
@@ -15625,11 +15618,11 @@ window:seperator({name = "Combat"}) do
 
         local FieldOfViewSettingsSection = AimlockAimColumn:section({name = "Field Of View Settings", side = "right", size = 0.3, icon = GetImage("Settings.png")})
 
-        FieldOfViewSettingsSection:slider({name = "Radius", flag = "AimlockAim_Radius", min = 0, max = 1000, default = 100, suffix = "°", callback = function(state)
+        FieldOfViewSettingsSection:slider({name = "Radius", flag = "AimlockAim_Radius", min = 0, max = 1000, default = 100, suffix = "ￂﾰ", callback = function(state)
             Config.Aimlock.Radius = state
         end})
 
-        FieldOfViewSettingsSection:slider({name = "Sides", flag = "AimlockAim_Sides", min = 3, max = 100, default = 25, suffix = "°", callback = function(state)
+        FieldOfViewSettingsSection:slider({name = "Sides", flag = "AimlockAim_Sides", min = 3, max = 100, default = 25, suffix = "ￂﾰ", callback = function(state)
             Config.Aimlock.Sides = state
         end})
 
@@ -15808,7 +15801,7 @@ window:seperator({name = "World"}) do
         RefreshAllElements()
     end})
 
-    _FilledBoxes:colorpicker({flag = "PlayerVisuals_FilledBoxes_Color1", color = Color3.fromRGB(255, 0, 0), alpha = 0.25, callback = function(state, alpha)
+    _FilledBoxes:colorpicker({flag = "PlayerVisuals_FilledBoxes_Color1", color = Color3.fromRGB(255, 105, 180), alpha = 0.25, callback = function(state, alpha)
         Config.ESP.Drawing.Boxes.GradientFillRGB1 = state
         Config.ESP.Drawing.Boxes.Filled.Transparency = alpha
         RefreshAllElements()
@@ -15872,7 +15865,7 @@ window:seperator({name = "World"}) do
         RefreshAllElements()
     end})
 
-    _ChamsToggle:colorpicker({flag = "PlayerVisuals_Chams_Color1", color = Color3.fromRGB(255, 0, 0), alpha = 0.8, callback = function(state, alpha)
+    _ChamsToggle:colorpicker({flag = "PlayerVisuals_Chams_Color1", color = Color3.fromRGB(255, 105, 180), alpha = 0.8, callback = function(state, alpha)
         Config.ESP.Drawing.Chams.FillRGB = state
         Config.ESP.Drawing.Distances.Fill_Transparency = alpha*100
         RefreshAllElements()
@@ -15959,11 +15952,11 @@ if Game_Name == "South Bronx" then
                 end
             end
 
-            writefile("HolyServicesUsernameRealGame.txt", name)
+            writefile("SouthBronxUsernameRealGame.txt", name)
         end})
 
         DuplicationSection:textbox({name = "Amount To Send (Max Is $20000)", callback = function(text)
-            writefile("HolyServicesAmountRealGame.txt", text)
+            writefile("SouthBronxAmountRealGame.txt", text)
         end})
 
         DuplicationSection:button({name = "Start Automated Duping", callback = function()
